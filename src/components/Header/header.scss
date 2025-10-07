@@ -3,28 +3,37 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
-header {
+.header {
+  width: 100%;
+  
   &__container {
     @include center-flex;
     justify-content: space-between;
-    padding: 40px 0 30px 0;
-    max-width: 1200px;
+    padding: 2rem 4rem;
     margin: 0 auto;
   }
+
   &__logo {
-    font-size: 2.5rem;
-    color: $primary-red;
-    letter-spacing: 1px;
-    font-weight: bold;
+    img {
+      width: 210px;
+      height: 68px;
+      object-fit: contain;
+    }
   }
+
   &__nav {
+    display: flex;
+    gap: 2rem;
+
     a {
       color: $black;
       text-decoration: none;
       font-weight: 500;
+      font-size: 1.125rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
-
-
-
 }
