@@ -1,0 +1,29 @@
+// footer.scss
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+footer {
+    background: $black;
+    color: $white;
+    padding: 48px 0 18px 0;
+    @include center-flex;
+    flex-direction: column;
+
+    &__logo-footer {
+        font-size: 1.45rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 24px;
+        color: $white;
+
+        span {
+            color: $primary-red;
+        }
+    }
+
+    &__p {
+        font-size: 1rem;
+        margin: 0;
+        letter-spacing: 0.8px;
+        opacity: 0.8;
+    }
+}

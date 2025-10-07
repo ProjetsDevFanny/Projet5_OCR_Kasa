@@ -1,0 +1,23 @@
+# .editorconfig
+# Indique que ce fichier est à la racine du projet
+root = true
+
+# Règles par défaut pour tous les fichiers
+[*]
+# Utiliser des espaces plutôt que des tabulations
+indent_style = space
+
+# Nombre d'espaces par niveau d'indentation
+indent_size = 2
+
+# Style de fin de ligne : LF (Unix/Mac)
+end_of_line = lf
+
+# Encodage des fichiers
+charset = utf-8
+
+# Supprime les espaces en fin de ligne automatiquement
+trim_trailing_whitespace = true
+
+# Ajoute automatiquement une ligne vide à la fin du fichier
+insert_final_newline = true

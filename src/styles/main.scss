@@ -1,0 +1,14 @@
+// main.scss
+@import './variables';
+@import './mixins';
+@import '../components/Layout/layout.scss';
+@import '../components/Header/header.scss';
+@import '../components/Footer/footer.scss';
+
+body {
+  font-family: $main-font;
+  background: $white;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
