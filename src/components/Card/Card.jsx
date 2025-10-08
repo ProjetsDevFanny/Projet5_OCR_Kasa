@@ -1,11 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './card.scss'
+import '../../assets/logements.json'
 
-function Card() {
+// Composant qui génère les cards dynamiquement depuis le fichiers JSON des logements fourni
+function Card({title, cover}) {
   return (
-    <div className="card">
-
-    </div>
+    <section className="card">
+      <figure>
+        <img className="card__img" src={cover} alt={title} />
+        <figcaption className="card__title">{title}</figcaption>
+      </figure>
+    </section>
   )
 }
 

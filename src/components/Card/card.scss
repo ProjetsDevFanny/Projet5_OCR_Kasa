@@ -3,20 +3,44 @@
 
 .card {
   @include card-shadow;
-  background: linear-gradient(180deg, $primary-red 60%, $secondary-red 100%);
   border-radius: $radiusCard;
+  width: 340px;
+  max-height: 340px;
   position: relative;
-  color: $white;
-  display: flex;
-  align-items: flex-end;
-  padding: 18px;
-  font-size: 1rem;
-  font-weight: 500;
-  width: 100%;
-  max-width: 340px;
-  /* taille max sur grand écran */
-  aspect-ratio: 1 / 1;
-  /* garde la forme carrée sans fixer la hauteur */
-}
+  cursor: pointer;
+  overflow: hidden; // empêche l'image de dépasser la card
+  margin: 0 auto;
 
-// background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
+  &::after {
+    content: "";
+    background: linear-gradient(hsla(0, 0%, 100%, 0), rgba(0, 0, 0, .502));
+    border-radius: inherit;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &__img {
+    object-fit: cover;
+    max-width: 340px;
+    aspect-ratio: 1 / 1; // forme carrée
+    border-radius: $radiusCard;
+    transition: transform 0.3s ease; // animation douce
+  }
+
+  &__title {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    font-size: 1.1rem;
+    color: $white;
+    margin: 1rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2509803922);
+  }
+
+  // Au survole de la card
+  &:hover .card__img {
+    transform: scale(1.05);
+  }
+}
