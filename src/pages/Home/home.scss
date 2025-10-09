@@ -16,8 +16,14 @@
     gap: 50px;
     margin-bottom: 45px;
 
-    @media (max-width: 1286px) {
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 768px) {
       grid-template-columns: repeat(1, 1fr);
+      padding: 1rem;
+      gap: 20px;
     }
   }
 }
