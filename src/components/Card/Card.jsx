@@ -1,6 +1,5 @@
 import React from 'react'
 import './card.scss'
-import '../../assets/logements.json'
 
 // Composant qui génère les cards dynamiquement depuis le fichiers JSON des logements fourni
 function Card({title, cover}) {

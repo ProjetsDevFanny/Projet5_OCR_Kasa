@@ -11,9 +11,8 @@ function Home() {
       <HeroBannerHome />
       <div className="home__gallery">
         {accommodations.map((accommodation) => (
-          <Link to={`/accommodation/${accommodation.id}`}>
+          <Link key={accommodation.id} to={`/accommodation/${accommodation.id}`}>
             <Card
-            key={accommodation.id}
             id={accommodation.id}
             title={accommodation.title}
             cover={accommodation.cover}

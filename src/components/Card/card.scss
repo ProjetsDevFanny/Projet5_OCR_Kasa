@@ -25,6 +25,7 @@
     position: absolute;
     top: 0;
     width: 100%;
+    pointer-events: none; // permet aux clics de passer à travers
   }
 
   &__img {

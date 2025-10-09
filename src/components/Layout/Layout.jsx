@@ -9,7 +9,7 @@ function Layout() {
     <div className="layout">
       <Header />
       <main className="layout__main-container">
-        <Outlet /> {/* Le contenu des pages s'affiche ici */}
+        <Outlet /> {/* Ici s'afficheront le contenu des pages enfants */}
       </main>
       <Footer />
     </div>
