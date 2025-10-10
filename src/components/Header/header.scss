@@ -9,7 +9,7 @@
   &__container {
     @include center-flex;
     justify-content: space-between;
-    padding: 2rem 4rem;
+    padding: 3rem 4rem;
     margin: 0 auto;
   }
 
@@ -23,13 +23,11 @@
 
   &__nav {
     display: flex;
-    gap: 2rem;
+    gap: 6rem;
 
     a {
       color: $black;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1.5rem;
+      @include font-style(2.4rem);
 
       &:hover {
         text-decoration: underline;

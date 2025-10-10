@@ -5,14 +5,26 @@ import NotFound from '../NotFound/NotFound';
 import './accommodation.scss';
 import arrowLeft from '../../assets/arrowLeft.png';
 import arrowRight from '../../assets/arrowRight.png';
+import starActive from '../../assets/starActive.png';
+import starInactive from '../../assets/starInactive.png';
 
 function Accommodation() {
   const { id } = useParams();
   const accommodation = accommodations.find(accommodation => accommodation.id === id);
   console.log(accommodation);
+
   if (!accommodation) {
-    return <NotFound />;  // ← ici on réutilise la page 404
+    return <NotFound />;  // ← page 404 affichée
   }
+
+  // -------------------------------
+  // Séparation prénom / nom
+  const fullName = accommodation.host.name; // exemple : "Jean Claude Duss"
+  const hostNames = fullName.split(' ');   // On coupe la chaîne en mots
+
+  const hostLastName = hostNames.pop();   // On considère que le dernier mot est le nom de famille = "Duss"
+  const hostFirstName = hostNames.join(' ');   // Tout le reste est le prénom (on sépare les mots avec un espace) = "Jean Claude"
+  // -------------------------------
 
   return (
     <div className="accommodation">
@@ -36,9 +48,11 @@ function Accommodation() {
 
       <section className="accommodation__content">
         <div className="accommodation__content-left">
-          <h1 className="accommodation__title"> {accommodation.title}</h1>
-          <div className="accommodation__location">
-            <span className="accommodation__location-value">{accommodation.location}</span>
+          <div className="accommodation__content-left-title">
+            <h1 className="accommodation__title"> {accommodation.title}</h1>
+            <div className="accommodation__location">
+              <span className="accommodation__location-value">{accommodation.location}</span>
+            </div>
           </div>
           <div className="accommodation__tags">
             {accommodation.tags.map((tag) => (
@@ -48,7 +62,9 @@ function Accommodation() {
         </div>
         <div className="accommodation__content-right">
           <div className="accommodation__host">
-            <span className="accommodation__host-name">{accommodation.host.name}</span>
+            <span className="accommodation__host-name">
+              {hostFirstName}<br />{hostLastName}
+            </span>
             <img src={accommodation.host.picture} alt={accommodation.host.name} className="accommodation__host-picture" />
           </div>
           <div className="accommodation__rating">

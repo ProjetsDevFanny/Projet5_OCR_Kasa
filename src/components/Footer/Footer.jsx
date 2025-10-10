@@ -13,7 +13,7 @@ function Footer() {
           </Link>
         </div>
       </div>
-      <p className="footer__p">© 2025 Kasa. All rights reserved</p>
+      <p className="footer__p">© 2020 Kasa. All rights reserved</p>
     </footer>
   )
 }

@@ -23,7 +23,7 @@
     z-index: 1;
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 2rem;
   }
 
   &__cover {
@@ -35,18 +35,77 @@
 
   &__carroussel-counter {
     position: absolute;
-    bottom: 20px;
+    bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
     color: $white;
-    font-size: 1.125rem;
-    font-weight: 500;
+    @include font-style(1.8rem);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 2rem; 
+  }
+
+  &__content-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.5rem;
+  }
+
+  &__host {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+  }
+
+  &__host-name {
+    @include font-style(1.8rem);
+    color: $primary-red;
+    text-align: right;
+  }
+
+  &__host-picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+
+  &__rating {
+    @include font-style(1.8rem);
+    text-align: right;
   }
 
   &__title {
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 143%;
+    @include font-style(3.6rem);
+    color: $primary-red;
+  }
+  
+  &__location {
+    @include font-style(1.8rem);
+  }
+
+  &__tags {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  &__tag {
+    @include font-style(1.4rem, 700);
+    background-color: $primary-red;
+    color: $white;
+    padding: 0.5rem 3rem;
+    border-radius: 11px;
   }
 }
