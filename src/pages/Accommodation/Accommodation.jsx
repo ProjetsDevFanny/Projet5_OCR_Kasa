@@ -5,8 +5,7 @@ import NotFound from '../NotFound/NotFound';
 import './accommodation.scss';
 import arrowLeft from '../../assets/arrowLeft.png';
 import arrowRight from '../../assets/arrowRight.png';
-import starActive from '../../assets/starActive.png';
-import starInactive from '../../assets/starInactive.png';
+import RatingsStars from '../../components/RatingStars/RatingsStars';
 
 function Accommodation() {
   const { id } = useParams();
@@ -68,7 +67,7 @@ function Accommodation() {
             <img src={accommodation.host.picture} alt={accommodation.host.name} className="accommodation__host-picture" />
           </div>
           <div className="accommodation__rating">
-            <span className="accommodation__rating-value">{accommodation.rating}</span>
+            <RatingsStars rating={accommodation.rating} />
           </div>
         </div>
       </section>
