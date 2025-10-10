@@ -1,0 +1,37 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.collapse {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+   
+  &__title {
+    @include font-style(1.8rem, 700);
+    background-color: $primary-red;
+    color: $white;
+    padding: 1rem 2rem 1rem 1rem;
+    border-radius: 9px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__arrow {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+  }
+
+  &__content {
+    @include font-style(1.8rem, 400);
+    background-color: $background-grey;
+    padding: 2rem 2rem 3rem 2rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+

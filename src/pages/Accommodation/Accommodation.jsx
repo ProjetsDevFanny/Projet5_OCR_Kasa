@@ -6,6 +6,7 @@ import './accommodation.scss';
 import arrowLeft from '../../assets/arrowLeft.png';
 import arrowRight from '../../assets/arrowRight.png';
 import RatingsStars from '../../components/RatingStars/RatingsStars';
+import Collapse from '../../components/Collapse/Collapse';
 
 function Accommodation() {
   const { id } = useParams();
@@ -30,13 +31,13 @@ function Accommodation() {
 
       <section className="accommodation__carroussel">
         <img src={accommodation.cover} alt={accommodation.title} className="accommodation__cover" />
-        <div className="accommodation__carroussel-buttons">
-          <button className="accommodation__carroussel-button-left">
+        <div className="accommodation__carroussel-arrows">
+          <div className="accommodation__carroussel-arrow-left">
             <img src={arrowLeft} alt="arrow left" />
-          </button>
-          <button className="accommodation__carroussel-button-right">
+          </div>
+          <div className="accommodation__carroussel-arrow-right">
             <img src={arrowRight} alt="arrow right" />
-          </button>
+          </div>
         </div>
         <div className="accommodation__carroussel-counter">
           <span>{accommodation.pictures.length}</span>
@@ -59,6 +60,7 @@ function Accommodation() {
             ))}
           </div>
         </div>
+
         <div className="accommodation__content-right">
           <div className="accommodation__host">
             <span className="accommodation__host-name">
@@ -72,8 +74,12 @@ function Accommodation() {
         </div>
       </section>
 
-
-
+      <section className="accommodation__collapse">
+        <Collapse title="Description" content={accommodation.description} />
+        <Collapse title="Équipements" content={accommodation.equipments.map((equipment) => (
+          <span key={equipment} className="accommodation__equipment">{equipment}</span>
+        ))} />
+      </section>
 
     </div>
   );

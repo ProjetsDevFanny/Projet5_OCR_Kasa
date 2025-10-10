@@ -13,7 +13,7 @@
     position: relative;
   }
 
-  &__carroussel-buttons {
+  &__carroussel-arrows {
     width: 100%;
     position: absolute;
     transform: translateY(-50%);
@@ -47,7 +47,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 2rem; 
+    margin-top: 2rem;
   }
 
   &__content-left {
@@ -91,7 +91,7 @@
     @include font-style(3.6rem);
     color: $primary-red;
   }
-  
+
   &__location {
     @include font-style(1.8rem);
   }
@@ -100,12 +100,19 @@
     display: flex;
     gap: 1rem;
   }
-  
+
   &__tag {
-    @include font-style(1.4rem, 700);
+    @include font-style(1.4rem,600);
     background-color: $primary-red;
     color: $white;
     padding: 0.5rem 3rem;
-    border-radius: 11px;
+    border-radius: 10px;
+  }
+
+  &__collapse {
+    display: flex;
+    margin-top: 2rem;
+    gap: 10rem;
+    margin-bottom: 4rem;
   }
 }
