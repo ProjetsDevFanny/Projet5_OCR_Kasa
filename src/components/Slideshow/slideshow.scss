@@ -1,0 +1,42 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.slideshow {
+  &__slideshow {
+    width: 100%;
+    height: 45vh;
+    border-radius: 25px;
+    position: relative;
+  }
+
+  &__carroussel-arrows {
+    width: 100%;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+
+  &__cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  &__carroussel-counter {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: $white;
+    @include font-style(1.8rem);
+  }
+
+}

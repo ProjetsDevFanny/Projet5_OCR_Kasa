@@ -3,10 +3,9 @@ import { useParams } from "react-router-dom";
 import accommodations from '../../assets/accommodations.json';
 import NotFound from '../NotFound/NotFound';
 import './accommodation.scss';
-import arrowLeft from '../../assets/arrowLeft.png';
-import arrowRight from '../../assets/arrowRight.png';
 import RatingsStars from '../../components/RatingStars/RatingsStars';
 import Collapse from '../../components/Collapse/Collapse';
+import Slideshow from '../../components/Slideshow/Slideshow';
 
 function Accommodation() {
   const { id } = useParams();
@@ -28,28 +27,14 @@ function Accommodation() {
 
   return (
     <div className="accommodation">
-
-      <section className="accommodation__carroussel">
-        <img src={accommodation.cover} alt={accommodation.title} className="accommodation__cover" />
-        <div className="accommodation__carroussel-arrows">
-          <div className="accommodation__carroussel-arrow-left">
-            <img src={arrowLeft} alt="arrow left" />
-          </div>
-          <div className="accommodation__carroussel-arrow-right">
-            <img src={arrowRight} alt="arrow right" />
-          </div>
-        </div>
-        <div className="accommodation__carroussel-counter">
-          <span>{accommodation.pictures.length}</span>
-          <span>/</span>
-          <span>{accommodation.pictures.length}</span>
-        </div>
+      <section className="accommodation__slideshow">
+        <Slideshow accommodation={accommodation} />
       </section>
 
       <section className="accommodation__content">
         <div className="accommodation__content-left">
           <div className="accommodation__content-left-title">
-            <h1 className="accommodation__title"> {accommodation.title}</h1>
+            <h1 className="accommodation__title">{accommodation.title}</h1>
             <div className="accommodation__location">
               <span className="accommodation__location-value">{accommodation.location}</span>
             </div>
