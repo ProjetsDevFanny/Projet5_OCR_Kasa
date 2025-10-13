@@ -2,14 +2,12 @@
 @import '../../styles/mixins';
 
 .slideshow {
-  &__slideshow {
-    width: 100%;
-    height: 45vh;
-    border-radius: 25px;
-    position: relative;
-  }
+  width: 100%;
+  height: 45vh;
+  border-radius: 25px;
+  position: relative;
 
-  &__carroussel-arrows {
+  &__arrows {
     width: 100%;
     position: absolute;
     transform: translateY(-50%);
@@ -22,14 +20,32 @@
     padding: 0 2rem;
   }
 
-  &__cover {
+  &__arrow-left {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__arrow-right {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__picture {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 25px;
+    transition: opacity 0.4s ease-in-out;
+    opacity: 1;
+
+    &.fade {
+      opacity: 0;
+    }
   }
 
-  &__carroussel-counter {
+  &__counter {
     position: absolute;
     bottom: 2rem;
     left: 50%;

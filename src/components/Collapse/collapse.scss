@@ -5,33 +5,44 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-   
+  border: none;
+  background-color: transparent;
+  text-align: left;
+
   &__title {
     @include font-style(1.8rem, 700);
     background-color: $primary-red;
     color: $white;
-    padding: 1rem 2rem 1rem 1rem;
+    padding: 1rem 2rem 1rem 2rem;
     border-radius: 9px;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     &__arrow {
-      width: 20px;
-      height: 20px;
+      width: 30px;
+      height: 30px;
       margin-right: 10px;
+      cursor: pointer;
+      transition: transform 0.4s ease;
     }
   }
 
   &__content {
     @include font-style(1.8rem, 400);
     background-color: $background-grey;
-    padding: 2rem 2rem 3rem 2rem;
     border-radius: 5px;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 2rem;
+    transition: max-height 0.4s ease, padding 0.4s ease;
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
+
+    &.open {
+      max-height: 1000px;
+      padding: 2rem 2rem;
+    }
   }
 }
-
-

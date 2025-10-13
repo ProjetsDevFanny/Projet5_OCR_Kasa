@@ -1,11 +1,11 @@
 import React from 'react'
 import { useParams } from "react-router-dom";
-import accommodations from '../../assets/accommodations.json';
 import NotFound from '../NotFound/NotFound';
 import './accommodation.scss';
 import RatingsStars from '../../components/RatingStars/RatingsStars';
 import Collapse from '../../components/Collapse/Collapse';
 import Slideshow from '../../components/Slideshow/Slideshow';
+import accommodations from '../../assets/accommodations.json';
 
 function Accommodation() {
   const { id } = useParams();

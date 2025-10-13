@@ -2,25 +2,57 @@ import React from 'react'
 import './slideshow.scss'
 import arrowLeft from '../../assets/arrowLeft.png';
 import arrowRight from '../../assets/arrowRight.png';
-  
+import { useState } from 'react';
+
 
 function Slideshow({ accommodation }) {
+  const [currentIndex, setCurrentIndex] = useState(0); // pour l'index de l'image en cours
+  const [fade, setFade] = useState(false); // pour le fondu
+
+  const handleArrowLeft = () => {
+    setFade(true); // déclenche le fondu
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) =>
+        (prevIndex - 1 + accommodation.pictures.length) % accommodation.pictures.length
+      );
+      setFade(false); // remet l'opacité à 1 après le changement
+    }, 400); // doit correspondre à la durée CSS du fondu
+  };
+
+  const handleArrowRight = () => {
+    setFade(true);
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) =>
+        (prevIndex + 1) % accommodation.pictures.length
+      );
+      setFade(false);
+    }, 400);
+  };
+
   return (
     <div className="slideshow">
-      <img src={accommodation.cover} alt={accommodation.title} className="accommodation__cover" />
-      <div className="accommodation__carroussel-arrows">
-        <div className="accommodation__carroussel-arrow-left">
-          <img src={arrowLeft} alt="arrow left" />
+      <img
+        src={accommodation.pictures[currentIndex]}
+        alt={accommodation.title}
+        className={`slideshow__picture ${fade ? 'fade' : ''}`}
+      />
+      {accommodation.pictures.length > 1 && (
+        <div className="slideshow__arrows">
+          <button className="slideshow__arrow-left" onClick={handleArrowLeft}>
+            <img src={arrowLeft} alt="arrow left" />
+          </button>
+          <button className="slideshow__arrow-right" onClick={handleArrowRight}>
+            <img src={arrowRight} alt="arrow right" />
+          </button>
         </div>
-        <div className="accommodation__carroussel-arrow-right">
-          <img src={arrowRight} alt="arrow right" />
+      )}
+      {accommodation.pictures.length > 1 && (
+        <div className="slideshow__counter">
+          <span>{currentIndex + 1}</span>
+          <span>/</span>
+          <span>{accommodation.pictures.length}</span>
         </div>
-      </div>
-      <div className="accommodation__carroussel-counter">
-        <span>{accommodation.pictures.length}</span>
-        <span>/</span>
-        <span>{accommodation.pictures.length}</span>
-      </div>
+      )}
     </div>
   )
 }
