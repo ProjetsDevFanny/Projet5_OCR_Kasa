@@ -1,3 +1,8 @@
+// ================================
+// COMPONENT COLLAPSE
+// Permet d'afficher et de masquer le contenu d'un collapse
+// ================================
+
 import React from 'react';
 import './collapse.scss';
 import arrowBack from '../../assets/arrowBack.png';
@@ -23,4 +28,4 @@ function Collapse({ title, content }) {
   );
 }
 
-export default Collapse;
+export default Collapse;  

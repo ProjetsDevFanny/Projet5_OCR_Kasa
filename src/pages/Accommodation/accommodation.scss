@@ -1,5 +1,5 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .accommodation {
   display: flex;
@@ -72,7 +72,7 @@
     border-radius: 10px;
   }
 
-  &__collapse {
+  &__collapses {
     display: flex;
     margin-top: 2rem;
     gap: 10rem;

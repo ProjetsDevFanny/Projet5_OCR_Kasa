@@ -1,6 +1,6 @@
 // Style pour le hero et les cards, à placer dans un fichier Home.module.scss
-@import '../../styles/variables';
-@import '../../styles/mixins';
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .home {
   display: flex;

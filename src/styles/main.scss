@@ -1,9 +1,9 @@
 // main.scss
-@import './variables';
-@import './mixins';
-@import '../components/Layout/layout.scss';
-@import '../components/Header/header.scss';
-@import '../components/Footer/footer.scss';
+@use './variables' as *;
+@use './mixins' as *;
+@use '../components/Layout/layout.scss';
+@use '../components/Header/header.scss';
+@use '../components/Footer/footer.scss';
 
 
 * {
