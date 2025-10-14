@@ -3,7 +3,7 @@ import './heroBannerHome.scss';
 
 function HeroBannerHome() {
   return (
-    <section className="heroBanner">
+    <section className="heroBannerHome">
        <h1>Chez vous, partout et ailleurs</h1>
     </section>
   )

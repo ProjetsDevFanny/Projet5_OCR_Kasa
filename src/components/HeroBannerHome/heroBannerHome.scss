@@ -1,10 +1,10 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 
-.heroBanner {
+.heroBannerHome {
   @include center-flex;
   border-radius: 25px;
-  background: url('../../assets/imgHeroBanner.png') center/cover no-repeat;
+  background: url('../../assets/imgHeroBannerHome.png') center/cover no-repeat;
   height: 25vh;
   margin-bottom: 4.5rem;
   box-shadow: 0px 4px 4px 0px #00000040;

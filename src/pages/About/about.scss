@@ -1,2 +1,13 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
+
+.about {
+  .about__collapses {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+  }
+}
