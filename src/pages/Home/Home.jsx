@@ -1,6 +1,6 @@
 import React from 'react'
 import './home.scss'
-import HeroBannerHome from '../../components/HeroBannerHome/HeroBannerHome'
+import HeroBanner from '../../components/HeroBanner/HeroBanner';
 import Card from '../../components/Card/Card'
 import accommodations from '../../assets/accommodations.json';
 import { Link } from 'react-router-dom';
@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 function Home() {
   return (
     <div className="home">
-      <HeroBannerHome />
+      <HeroBanner page="home" />
       <div className="home__gallery">
         {accommodations.map((accommodation) => (
           <Link key={accommodation.id} to={`/accommodation/${accommodation.id}`}>

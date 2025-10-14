@@ -1,10 +1,9 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 
-.heroBannerHome {
+.heroBanner {
   @include center-flex;
   border-radius: 25px;
-  background: url('../../assets/imgHeroBannerHome.png') center/cover no-repeat;
   height: 25vh;
   margin-bottom: 4.5rem;
   box-shadow: 0px 4px 4px 0px #00000040;
@@ -18,7 +17,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); // ← c'est le masque sombre sur l'image
   }
 
   h1 {
@@ -27,14 +25,31 @@
     @include font-style(4.8rem, 700);
     text-align: center;
     color: $white;
-    
-    /* contour simulé autour des lettres */
     text-shadow:
+    // /* contour simulé autour des lettres */
       1px 0 $black,
       -1px 0 $black,
       0 1px $black,
       0 -1px $black,
-      /* ombre portée douce pour lisibilité */
+      //   /* ombre portée douce pour lisibilité */
       0px 4px 4px #00000040;
+  }
+
+  // --- variante Home ---
+  &.home {
+    background: url('../../assets/imgHeroBannerHome.png') center/cover no-repeat;
+
+    &::after {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  // --- variante About ---
+  &.about {
+    background: url('../../assets/imgHeroBannerAbout.png') center/cover no-repeat;
+
+    &::after {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
   }
 }

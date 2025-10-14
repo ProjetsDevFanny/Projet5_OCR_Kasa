@@ -1,0 +1,26 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.notfound {
+  @include center-flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  h1 {
+    @include font-style(25rem, 700);
+    color: $primary-red;
+   }
+
+  p {
+    @include font-style(3rem, 500);
+    color: $primary-red;
+  }
+  
+  a {
+    @include font-style(1.8rem, 500);
+    text-decoration: underline;
+    margin-top: 7rem;
+  }
+}
+
+

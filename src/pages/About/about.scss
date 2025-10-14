@@ -2,6 +2,8 @@
 @use '../../styles/mixins' as *;
 
 .about {
+  padding-bottom: 3rem;
+  
   .about__collapses {
     display: flex;
     flex-direction: column;
