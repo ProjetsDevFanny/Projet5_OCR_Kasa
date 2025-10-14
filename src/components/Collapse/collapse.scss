@@ -18,13 +18,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 1;
 
     &__arrow {
       width: 30px;
       height: 30px;
       margin-right: 10px;
       cursor: pointer;
-      transition: transform 0.4s ease;
+      transition: transform 0.6s ease;
     }
   }
 
@@ -35,14 +37,23 @@
     overflow: hidden;
     max-height: 0;
     padding: 0 2rem;
-    transition: max-height 0.4s ease, padding 0.4s ease;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    transform: translateY(-20px);
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+                padding 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.4s ease;
+    z-index: -1;
+    opacity: 0;
 
     &.open {
-      max-height: 1000px;
       padding: 2rem 2rem;
+      max-height: 600px;
+      transform: translateY(0px);
+      opacity: 1;
     }
   }
 }
+

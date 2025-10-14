@@ -13,8 +13,12 @@ import { useState } from 'react';
 function Collapse({ title, content }) {
   const [isOpen, setIsOpen] = useState(false); // état de l'open
 
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  }
+
   return (
-    <button className="collapse" onClick={() => setIsOpen(!isOpen)}>
+    <button className="collapse" onClick={handleClick}>
       <h2 className="collapse__title">{title}
         <img
           src={arrowBack}
