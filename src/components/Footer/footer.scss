@@ -10,6 +10,10 @@
 	flex-direction: column;
 	gap: 2.5rem;
 
+	@include tablet {
+		padding: 3rem 0 3rem 0;
+	}
+
 	&__container {
 		@include center-flex;
 		flex-direction: column;
@@ -27,5 +31,11 @@
 		color: $white;
 		@include font-style(2.4rem);
 		text-align: center;
+
+		@include mobile {
+				@include font-style(1.2rem);
+				width: 30%;
+			}
 	}
-}
+
+	}

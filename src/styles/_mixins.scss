@@ -18,3 +18,26 @@
   font-size: $size;
   font-weight: $weight;
 }
+
+// Mixins desktop-first => max-width uniquement
+@mixin desktop {
+  @media (max-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+
+// ⚠️ Important : dans les SCSS, toujours appliquer les mixins dans cet ordre : desktop → tablet → mobile
+// Les plus petits écrasent les plus grands pour chaque propriété !

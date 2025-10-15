@@ -8,6 +8,18 @@
   margin-bottom: 4.5rem;
   box-shadow: 0px 4px 4px 0px #00000040;
   position: relative;
+  box-sizing: border-box;
+
+  @include tablet {
+    margin-bottom: 3rem;
+  }
+  
+  @include mobile {
+    height: 12vh;
+    border-radius: 10px;
+    box-shadow: none;
+    margin-bottom: 2rem;
+  }
 
   &::after {
     content: "";
@@ -17,22 +29,41 @@
     left: 0;
     right: 0;
     bottom: 0;
+
+    @include mobile {
+      border-radius: 10px;
+    }
   }
 
   h1 {
     position: relative;
     z-index: 1;
+    padding: 0 6rem;
     @include font-style(4.8rem, 700);
     text-align: center;
     color: $white;
     text-shadow:
-    // /* contour simulé autour des lettres */
+      // /* contour simulé autour des lettres */
       1px 0 $black,
       -1px 0 $black,
       0 1px $black,
       0 -1px $black,
       //   /* ombre portée douce pour lisibilité */
       0px 4px 4px #00000040;
+
+    @include tablet {
+      @include font-style(3.6rem, 700);
+      padding: 0 4rem;
+    }
+
+    @include mobile {
+      @include font-style(2.4rem, 600, 1.2);
+      text-align: left;
+      padding: 0 4rem 0 2rem;
+      // /* ombre portée douce pour lisibilité, contour retiré */
+      text-shadow:
+        0px 4px 4px #00000040;
+    }
   }
 
   // --- variante Home ---
