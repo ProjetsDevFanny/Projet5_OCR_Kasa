@@ -9,21 +9,83 @@
   &__content {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     margin-top: 2rem;
-  }
+    
+    @include tablet {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
 
+    @include mobile {
+      margin-top: 1rem;
+    }
+  }
+  
   &__content-left {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-  }
 
+    @include mobile {
+      gap: 1rem;
+    }
+  }
+  
+  &__title {
+    @include font-style(3.6rem);
+    color: $primary-red;
+
+    @include tablet {
+      @include font-style(2.4rem);
+      margin-bottom: 1rem;
+    }
+    
+    @include mobile {
+      @include font-style(1.8rem);
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  &__location {
+    @include font-style(1.8rem);
+
+    @include mobile {
+      @include font-style(1.4rem);
+    }
+  }
+  
+  &__tags {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  &__tag {
+    @include font-style(1.4rem, 600);
+    background-color: $primary-red;
+    color: $white;
+    padding: 0.5rem 3rem;
+    border-radius: 10px;
+    white-space: nowrap;
+
+    @include mobile {
+      @include font-style(1rem);
+      padding: 0.2rem 2rem;
+      border-radius: 6px;
+    }
+  }
+  
   &__content-right {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 1.5rem;
+    
+    @include tablet {
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 
   &__host {
@@ -37,12 +99,21 @@
     @include font-style(1.8rem);
     color: $primary-red;
     text-align: right;
+
+    @include mobile {
+      @include font-style(1.2rem);
+    }
   }
 
   &__host-picture {
     width: 64px;
     height: 64px;
     border-radius: 50%;
+
+    @include mobile {
+      width: 35px;
+      height: 35px;
+    }
   }
 
   &__rating {
@@ -50,32 +121,21 @@
     text-align: right;
   }
 
-  &__title {
-    @include font-style(3.6rem);
-    color: $primary-red;
-  }
-
-  &__location {
-    @include font-style(1.8rem);
-  }
-
-  &__tags {
-    display: flex;
-    gap: 1rem;
-  }
-
-  &__tag {
-    @include font-style(1.4rem,600);
-    background-color: $primary-red;
-    color: $white;
-    padding: 0.5rem 3rem;
-    border-radius: 10px;
-  }
-
   &__collapses {
     display: flex;
     margin-top: 2rem;
-    gap: 10rem;
+    gap: 7rem;
     margin-bottom: 4rem;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+      
+      @include mobile {
+        gap: 2rem;
+        margin-bottom: 2.5rem;
+      }
+    }
   }
 }

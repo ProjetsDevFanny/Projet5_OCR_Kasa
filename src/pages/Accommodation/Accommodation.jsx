@@ -60,8 +60,8 @@ function Accommodation() {
       </section>
 
       <section className="accommodation__collapses">
-        <Collapse title="Description" content={accommodation.description} />
-        <Collapse title="Équipements" content={accommodation.equipments.map((equipment) => (
+        <Collapse className="accommodation__collapse_description" title="Description" content={accommodation.description} />
+        <Collapse className="accommodation__collapse_equipments" title="Équipements" content={accommodation.equipments.map((equipment) => (
           <span key={equipment} className="accommodation__equipment">{equipment}</span>
         ))} />
       </section>

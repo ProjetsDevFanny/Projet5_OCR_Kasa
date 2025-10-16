@@ -3,10 +3,15 @@
 
 .rating-stars {
   display: flex;
-  gap: 4px; /* espace entre les étoiles */
+  gap: 0.3vw; /* espace entre les étoiles */
 
   .rating-star {
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 28px;
+
+    @include mobile {
+      width: 18px;
+      height: 18px;
+    }
   }
 }

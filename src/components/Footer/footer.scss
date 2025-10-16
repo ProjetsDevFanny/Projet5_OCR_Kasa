@@ -5,13 +5,17 @@
 .footer {
 	background: $black;
 	color: $white;
-	padding: 5rem 0 5rem 0;
+	padding: 7rem 0 7rem 0;
 	@include center-flex;
 	flex-direction: column;
 	gap: 2.5rem;
 
 	@include tablet {
-		padding: 3rem 0 3rem 0;
+		gap: 2rem;
+	}
+
+	@include mobile {
+		gap: 1rem;
 	}
 
 	&__container {
@@ -31,6 +35,10 @@
 		color: $white;
 		@include font-style(2.4rem);
 		text-align: center;
+
+		@include tablet {
+			@include font-style(1.8rem);
+		}
 
 		@include mobile {
 				@include font-style(1.2rem);

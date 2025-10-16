@@ -10,10 +10,8 @@
   text-align: left;
 
   &__title {
-    @include font-style(1.8rem, 700);
     background-color: $primary-red;
-    color: $white;
-    padding: 0.5rem 2rem 0.5rem 2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -21,14 +19,30 @@
     position: relative;
     z-index: 1;
     border: none;
-    
+
+    & h2 {
+      @include font-style(1.8rem, 700);
+      color: $white;
+
+      @include mobile {
+        @include font-style(1.3rem, 700);
+      }
+    }
+
     &__arrow {
-      width: 30px;
-      height: 30px;
-      margin-right: 10px;
+      width: 24px;
+      height: 24px;
       cursor: pointer;
       transition: transform 0.6s ease;
+
+      @include mobile {
+        width: 16px;
+        height: 16px;
+      }
     }
+
+
+
   }
 
   &__content {
@@ -42,23 +56,38 @@
     flex-direction: column;
     gap: 0.5rem;
     transform: translateY(-20px);
-    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
-                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
-                padding 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
-                opacity 0.4s ease;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+      padding 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.4s ease;
     z-index: -1;
     opacity: 0;
+
+    @include tablet {
+      @include font-style(1.4rem, 400);
+      padding: 0 1rem;
+    }
+
+    @include mobile {
+      @include font-style(1.2rem, 400);
+    }
 
     &.open {
       padding: 2rem;
       max-height: 600px;
       transform: translateY(0px);
       opacity: 1;
+
+      @include tablet {
+        padding: 1rem;
+        max-height: 400px;
+      }
     }
   }
 }
 
 // règle spécifique à la page À propos
-.about .collapse__content.open {
-  max-height: 100px; 
+.about .collapse__content.open,
+.accommodation__collapse_description .collapse__content.open {
+  max-height: 200px;
 }
