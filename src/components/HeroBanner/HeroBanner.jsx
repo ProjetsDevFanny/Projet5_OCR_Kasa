@@ -14,7 +14,7 @@ import './heroBanner.scss';
 
 function HeroBanner({ page }) {
   return (
-    <section className={`heroBanner ${page}`}>
+    <section className={`heroBanner ${page}`}> // ajoute dynamiquement la classe CSS en fonction de la page.
       {page === 'home' && <h1>Chez vous, partout et ailleurs</h1>}
     </section>
   );
