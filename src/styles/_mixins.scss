@@ -1,7 +1,17 @@
+/**
+ * @file _mixins.scss
+ * @description Fichier de mixins réutilisables pour l'application.
+ *              Contient les mixins pour les styles récurrents (flexbox, typographie) et les media queries.
+ *              Approche desktop-first : utiliser les mixins dans l'ordre desktop → tablet → mobile.
+ * @author Simon Fanny
+ * @date 16/10/2025
+ * @project Kasa - Application de location immobilière - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+
 @use './variables' as *;
 
-
-// _mixin.scss
 @mixin card-shadow {
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
 }

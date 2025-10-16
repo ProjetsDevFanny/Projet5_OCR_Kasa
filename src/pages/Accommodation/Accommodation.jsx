@@ -1,3 +1,14 @@
+/**
+ * @file Accommodation.jsx
+ * @description Page de détails d'un logement affichant toutes les informations (photos, description, équipements, etc.).
+ *              Récupère l'ID depuis l'URL et affiche la page 404 si le logement n'existe pas.
+ * @author Simon Fanny
+ * @date 16/10/2025
+ * @project Kasa - Application de location immobilière - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+
 import React from 'react'
 import { useParams } from "react-router-dom";
 import NotFound from '../NotFound/NotFound';

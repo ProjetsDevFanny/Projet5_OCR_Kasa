@@ -1,3 +1,13 @@
+/**
+ * @file main.jsx
+ * @description Point d'entrée de l'application React. Initialise le rendu de l'application dans le DOM.
+ * @author Simon Fanny
+ * @date 16/10/2025
+ * @project Kasa - Application de location immobilière - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles/main.scss'

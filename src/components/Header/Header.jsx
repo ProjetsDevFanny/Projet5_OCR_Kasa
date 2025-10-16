@@ -1,3 +1,14 @@
+/**
+ * @file Header.jsx
+ * @description Composant Header affiché sur toutes les pages avec le logo et la navigation principale.
+ *              Gère le menu de navigation avec liens actifs vers Accueil et À propos.
+ * @author Simon Fanny
+ * @date 16/10/2025
+ * @project Kasa - Application de location immobilière - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+
 import React from 'react'
 import './header.scss'
 import { NavLink } from 'react-router-dom'

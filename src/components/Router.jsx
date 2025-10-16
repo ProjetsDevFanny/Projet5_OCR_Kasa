@@ -1,3 +1,14 @@
+/**
+ * @file Router.jsx
+ * @description Configuration du routeur de l'application utilisant React Router v6.
+ *              Définit toutes les routes : Home, About, Accommodation et NotFound (404).
+ * @author Simon Fanny
+ * @date 16/10/2025
+ * @project Kasa - Application de location immobilière - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+
 import React from "react";
 import { createBrowserRouter } from 'react-router-dom'
 import Layout from '../components/Layout/Layout'

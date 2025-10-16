@@ -1,3 +1,14 @@
+/**
+ * @file Footer.jsx
+ * @description Composant Footer affiché sur toutes les pages de l'application.
+ *              Contient le logo Kasa en blanc et les informations de copyright.
+ * @author Simon Fanny
+ * @date 16/10/2025
+ * @project Kasa - Application de location immobilière - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+
 import React from 'react'
 import './footer.scss'
 import { Link } from 'react-router-dom'

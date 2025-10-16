@@ -1,3 +1,14 @@
+/**
+ * @file RatingsStars.jsx
+ * @description Composant d'affichage des étoiles de notation d'un logement.
+ *              Affiche 5 étoiles dont certaines sont actives selon la note reçue en props.
+ * @author Simon Fanny
+ * @date 16/10/2025
+ * @project Kasa - Application de location immobilière - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+
 import React from 'react'
 import starActive from '../../assets/starActive.png';
 import starInactive from '../../assets/starInactive.png';

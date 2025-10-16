@@ -1,9 +1,19 @@
+/**
+ * @file Slideshow.jsx
+ * @description Composant de diaporama permettant de naviguer entre les photos d'un logement.
+ *              Affiche des flèches de navigation et un compteur si plusieurs images sont disponibles.
+ * @author Simon Fanny
+ * @date 16/10/2025
+ * @project Kasa - Application de location immobilière - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
+
 import React from 'react'
 import './slideshow.scss'
 import arrowLeft from '../../assets/arrowLeft.png';
 import arrowRight from '../../assets/arrowRight.png';
 import { useState } from 'react';
-
 
 function Slideshow({ accommodation }) {
   const [currentIndex, setCurrentIndex] = useState(0); // pour l'index de l'image en cours

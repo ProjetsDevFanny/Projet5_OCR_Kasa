@@ -1,7 +1,13 @@
-// ================================
-// COMPONENT COLLAPSE
-// Permet d'afficher et de masquer le contenu d'un collapse
-// ================================
+/**
+ * @file Collapse.jsx
+ * @description Composant d'accordéon réutilisable permettant d'afficher/masquer du contenu.
+ *              Utilisé sur les pages À propos et Fiche logement pour afficher les informations.
+ * @author Simon Fanny
+ * @date 16/10/2025
+ * @project Kasa - Application de location immobilière - OpenClassrooms
+ * 
+ * ===============================================================================
+ */
 
 import React, { useState } from 'react';
 import './collapse.scss';
