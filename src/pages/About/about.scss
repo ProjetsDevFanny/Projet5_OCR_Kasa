@@ -11,5 +11,10 @@
     width: 80%;
     margin: 0 auto;
     height: 100%;
+
+    @include mobile {
+      width: 100%;
+      gap: 2rem;
+    }
   }
 }
