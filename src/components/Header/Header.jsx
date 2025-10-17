@@ -11,7 +11,7 @@
 
 import React from 'react'
 import './header.scss'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import logoRed from '../../assets/LOGO_red.png'
 
 function Header() {
@@ -19,10 +19,10 @@ function Header() {
     <header className="header">
       <div className="header__container">
         {/* Logo */}
-        <div className="header__logo">          
-          <NavLink to="/" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} >
+        <div className="header__logo">
+          <Link to="/">
             <img src={logoRed} alt="Logo-Kasa-red" />
-          </NavLink>
+          </Link>
         </div>
         <nav className="header__nav">
           <NavLink to="/" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} >Accueil</NavLink>
