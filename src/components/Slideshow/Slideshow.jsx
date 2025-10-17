@@ -19,7 +19,7 @@ function Slideshow({ accommodation }) {
   const [currentIndex, setCurrentIndex] = useState(0); // pour l'index de l'image en cours
   const [fade, setFade] = useState(false); // pour le fondu
 
-  // Précharge toutes les images au montage du composant pour plus de fluidité
+  // Précharge toutes les images au montage du composant
   useEffect(() => {
     accommodation.pictures.forEach((picture) => {
       const img = new Image();
@@ -27,7 +27,6 @@ function Slideshow({ accommodation }) {
     });
   }, [accommodation.pictures]);
 
-  // Fonction pour naviguer vers la gauche
   const handleArrowLeft = () => {
     setFade(true); // déclenche le fondu
     setTimeout(() => {
@@ -38,7 +37,6 @@ function Slideshow({ accommodation }) {
     }, 400); // doit correspondre à la durée CSS du fondu
   };
 
-  // Fonction pour naviguer vers la droite
   const handleArrowRight = () => {
     setFade(true);
     setTimeout(() => {
@@ -49,7 +47,6 @@ function Slideshow({ accommodation }) {
     }, 400);
   };
 
-  // Rendu du composant
   return (
     <div className="slideshow">
       <img
