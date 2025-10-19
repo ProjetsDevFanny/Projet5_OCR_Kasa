@@ -8,7 +8,7 @@ Ce projet est le **Projet 5** de la formation **Développeur Web** d'[OpenClassr
 
 Kasa est une application web moderne de location immobilière entre particuliers, développée avec React. L'application permet aux utilisateurs de consulter un catalogue de logements disponibles avec leurs détails complets (photos, description, équipements, localisation, etc.).
 
-🌐 **[Voir le site en ligne](https://github.com/ProjetsDevFanny/Projet5_OCR_Kasa)** _(à mettre à jour avec l'URL de déploiement)_
+🌐 **[Voir le site en ligne](https://projet-kasa-fanny.netlify.app/)**
 
 ## 🎯 Objectifs pédagogiques
 
