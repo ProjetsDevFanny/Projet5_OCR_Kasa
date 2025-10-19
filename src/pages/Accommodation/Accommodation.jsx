@@ -10,8 +10,7 @@
  */
 
 import React from 'react'
-import { useParams } from "react-router-dom";
-import NotFound from '../NotFound/NotFound';
+import { useParams, Navigate } from "react-router-dom";
 import './accommodation.scss';
 import RatingsStars from '../../components/RatingStars/RatingsStars';
 import Collapse from '../../components/Collapse/Collapse';
@@ -24,7 +23,7 @@ function Accommodation() {
   console.log(accommodation);
 
   if (!accommodation) {
-    return <NotFound />;  // ← page 404 affichée
+    return <Navigate to="/404" replace />;  // ← Redirection vers la page 404
   }
 
   // -------------------------------

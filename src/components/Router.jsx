@@ -26,6 +26,7 @@ export const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: 'about', element: <About /> },
       { path: 'accommodation/:id', element: <Accommodation /> },
+      { path: '404', element: <NotFound /> }, // Route explicite pour la page 404
       { path: '*', element: <NotFound /> } // pour les URL inexistantes -> '*'catch-all
     ],
   },
