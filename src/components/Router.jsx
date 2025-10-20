@@ -23,11 +23,12 @@ export const router = createBrowserRouter([
     element: <Layout />,
     errorElement: <NotFound />, // pour les erreurs internes de React Router
     children: [
-      { index: true, element: <Home /> },
+      { index: true, element: <Home /> }, // ← INDEX = page par défaut qui s'affiche'/'
       { path: 'about', element: <About /> },
       { path: 'accommodation/:id', element: <Accommodation /> },
-      { path: '404', element: <NotFound /> }, // Route explicite pour la page 404
-      { path: '*', element: <NotFound /> } // pour les URL inexistantes -> '*'catch-all
+      { path: '404', element: <NotFound /> }, // Route pour la page 404
+      { path: '*', element: <NotFound /> } // Catch-all pour toutes les URL inexistantes
     ],
   },
 ])
+   
